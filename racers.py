@@ -1,6 +1,18 @@
 def non_winners(races):
-    # Write your solution here!
-    pass
+    winner_set = set()
+    racer_set = set()
+
+    for racers in races.values():
+        racer_set.add(racers[0])
+        racer_set.add(racers[1])
+        racer_set.add(racers[2])
+        winner_set.add(racers[0])
+        
+    not_winner = racer_set - winner_set
+    
+    return not_winner
+
+
 
 
 races_1 = {
